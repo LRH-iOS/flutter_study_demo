@@ -1,0 +1,69 @@
+name: flutter_study_demo
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+#需要注意dependencies和dev_dependencies的区别:
+#dependencies的依赖包将作为APP的源码的一部分参与编译，生成最终的安装包。
+#dev_dependencies的依赖包只是作为开发阶段的一些工具包，主要是用于帮助我们提高开发、测试效率，比如flutter的自动化测试包等。
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+  #flutter_localizations:
+  #  sdk: flutter
+  #flustarts: ^0.2.6+1
+
+  #新添加Pub依赖库
+  english_words: ^3.1.3
+
+#  如果我们正在本地开发一个包，包名为pkg1，我们可以通过下面方式依赖：(路径可以是相对的，也可以是绝对的)
+#  pkg1:
+#    path: ../../code/pkg1
+
+#  依赖Git：你也可以依赖存储在Git仓库中的包。如果软件包位于仓库的根目录中，请使用以下语法
+#  pkg1:
+#    git:
+#      url: git://github.com/xxx/pkg1.git
+
+#  上面假定包位于Git存储库的根目录中。如果不是这种情况，可以使用path参数指定相对位置，例如：
+#  package1:
+#    git:
+#      url: git://github.com/flutter/packages.git
+#      path: packages/package1
+
+#更多方法：https://www.dartlang.org/tools/pub/dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+
+  uses-material-design: true
+
+
+#  assets:
+#    - assets/my_icon.png
+#    - assets/background.png
+#  assets指定应包含在应用程序中的文件， 每个asset都通过相对于pubspec.yaml文件所在的文件系统路径来标识自身的路径。
+#  asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets文件夹）
+
+#  打包包中的 assets
+#  例如，一个名为“fancy_backgrounds”的包，可能包含以下文件：
+#  …/lib/backgrounds/background1.png
+#  …/lib/backgrounds/background2.png
+#  …/lib/backgrounds/background3.png
+#  要包含第一张图像，必须在pubspec.yaml的assets部分中声明它：
+#
+#flutter:
+#  assets:
+#    - packages/fancy_backgrounds/backgrounds/background1.png
+#  lib/是隐含的，所以它不应该包含在资产路径中。

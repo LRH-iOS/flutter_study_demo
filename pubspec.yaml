@@ -46,24 +46,44 @@ dev_dependencies:
 
 flutter:
 
-
+  # Flutter默认包含了一套Material Design的字体图标
   uses-material-design: true
 
+  assets:
+    - images/1.png
 
-#  assets:
-#    - assets/my_icon.png
-#    - assets/background.png
-#  assets指定应包含在应用程序中的文件， 每个asset都通过相对于pubspec.yaml文件所在的文件系统路径来标识自身的路径。
-#  asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets文件夹）
+  #  assets:
+  #    - assets/my_icon.png
+  #    - assets/background.png
+  #  assets指定应包含在应用程序中的文件， 每个asset都通过相对于pubspec.yaml文件所在的文件系统路径来标识自身的路径。
+  #  asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets文件夹）
 
-#  打包包中的 assets
-#  例如，一个名为“fancy_backgrounds”的包，可能包含以下文件：
-#  …/lib/backgrounds/background1.png
-#  …/lib/backgrounds/background2.png
-#  …/lib/backgrounds/background3.png
-#  要包含第一张图像，必须在pubspec.yaml的assets部分中声明它：
-#
-#flutter:
-#  assets:
-#    - packages/fancy_backgrounds/backgrounds/background1.png
-#  lib/是隐含的，所以它不应该包含在资产路径中。
+  #  打包包中的 assets
+  #  例如，一个名为“fancy_backgrounds”的包，可能包含以下文件：
+  #  …/lib/backgrounds/background1.png
+  #  …/lib/backgrounds/background2.png
+  #  …/lib/backgrounds/background3.png
+  #  要包含第一张图像，必须在pubspec.yaml的assets部分中声明它：
+  #
+  #  assets:
+  #    - packages/fancy_backgrounds/backgrounds/background1.png
+  #  lib/是隐含的，所以它不应该包含在资产路径中。
+
+
+  fonts:
+    - family: myIcon     #指定一个字体名
+      fonts:
+        - asset: fonts/iconfont.ttf
+
+#  要将字体文件打包到应用中，和使用其它资源一样，要先在pubspec.yaml中声明它。然后将字体文件复制到在pubspec.yaml中指定的位置
+#  fonts:
+#    - family: Raleway
+#      fonts:
+#        - asset: assets/fonts/Raleway-Regular.ttf
+#        - asset: assets/fonts/Raleway-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Raleway-SemiBold.ttf
+#          weight: 600
+#    - family: AbrilFatface
+#      fonts:
+#        - asset: assets/fonts/abrilfatface/AbrilFatface-Regular.ttf

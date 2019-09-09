@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'SecondProjectDemo.dart';
-import 'ThirdProjectDemo.dart';
+import 'package:flutter_study_demo/Second/SecondProjectDemo.dart';
+import 'package:flutter_study_demo/Third/ThirdProjectDemo.dart';
 
 void main() => runApp(MyApp());
 

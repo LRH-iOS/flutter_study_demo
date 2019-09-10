@@ -70,10 +70,10 @@ flutter:
   #  lib/是隐含的，所以它不应该包含在资产路径中。
 
 
-  fonts:
-    - family: myIcon     #指定一个字体名
-      fonts:
-        - asset: fonts/iconfont.ttf
+#  fonts:
+#    - family: myIcon     #指定一个字体名
+#      fonts:
+#        - asset: fonts/iconfont.ttf
 
 #  要将字体文件打包到应用中，和使用其它资源一样，要先在pubspec.yaml中声明它。然后将字体文件复制到在pubspec.yaml中指定的位置
 #  fonts:

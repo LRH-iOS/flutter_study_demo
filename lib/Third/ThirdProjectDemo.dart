@@ -5,7 +5,8 @@ import 'TextStudyDemo.dart';
 import 'ButtonStudyDemo.dart';
 import 'ImageStudyDemo.dart';
 import 'SwitchStudyDemo.dart';
-
+import 'FormAndTextField.dart';
+import 'ProgressStudyDemo.dart';
 
 //《基础组件》
 //Text：该组件可让您创建一个带格式的文本。
@@ -161,6 +162,33 @@ class _CounterWidgetState extends State<CounterWidget> {
                     return SwitchAndCheckBoxTestRoute();
                   }));
                 }
+            ),
+            FlatButton(
+              child: Text('输入框'),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                  return TextFieldStudyWidget(title: '输入框、表单',);//FocusTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text('表单'),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                  return FormTestRoute();//FocusTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text('进度条'),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                  return ProgressTestWidget();//FocusTestRoute();
+                }));
+              },
             ),
           ],
         ),

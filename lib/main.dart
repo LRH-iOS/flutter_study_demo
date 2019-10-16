@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_demo/Second/SecondProjectDemo.dart';
 import 'package:flutter_study_demo/Third/ThirdProjectDemo.dart';
+import 'package:flutter_study_demo/Fourth/FourthProjectDemo.dart';
 
 void main() => runApp(MyApp());
 
@@ -158,6 +159,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   fullscreenDialog: false,
                     builder: (context) {
                       return CounterWidget();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("布局类组件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return FourthProjectWidget();
                     }
                 ));
               },

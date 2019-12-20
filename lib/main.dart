@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study_demo/Second/SecondProjectDemo.dart';
 import 'package:flutter_study_demo/Third/ThirdProjectDemo.dart';
 import 'package:flutter_study_demo/Fourth/FourthProjectDemo.dart';
+import 'package:flutter_study_demo/Fiveth/FivethProjectDemo.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         "echo": (context) => EcRouter(),
       },
 
-      //MaterialApp有一个onGenerateRoute属性，它在打开命名路由时会可能会被调用，之所以说可能，
+      //MaterialApp有一个onGenerateRoute属性，它在打开命名路由时可能会被调用，之所以说可能，
       //是因为当调用Navigator.pushNamed(...)打开命名路由时，如果指定的路由名在路由表中已注册，
       //则会调用路由表中的builder函数来生成路由组件；如果路由表中没有注册，才会调用onGenerateRoute来生成路由。
       //注意，onGenerateRoute只会对命名路由生效。
@@ -155,8 +156,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("基础组件"),
               textColor: Colors.red,
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute (
-                  fullscreenDialog: false,
+                Navigator.of(context).push(MaterialPageRoute(
+                    fullscreenDialog: false,
                     builder: (context) {
                       return CounterWidget();
                     }
@@ -171,6 +172,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     fullscreenDialog: false,
                     builder: (context) {
                       return FourthProjectWidget();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("容器类组件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return FivethWidget();
                     }
                 ));
               },

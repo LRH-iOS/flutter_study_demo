@@ -141,34 +141,40 @@ class _CounterWidgetState extends State<CounterWidget> {
               },
             ),
             FlatButton.icon(
-              icon: Icon(Icons.info),
-              label: Text("按钮"),
-              onPressed: () {
-                Navigator.push(context, CupertinoPageRoute(builder: (context) {
-                  return ButtonStudyWidget();
-                }));
-              }
-            ),
-            RaisedButton.icon(onPressed: () {
-              Navigator.push(context, CupertinoPageRoute(builder: (context) {
-                return ImageStudyWidget();
-              }));
-            }, icon: Icon(Icons.access_time), label: Text('Image')),
+                icon: Icon(Icons.info),
+                label: Text("按钮"),
+                onPressed: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) {
+                    return ButtonStudyWidget();
+                  }));
+                }),
+            RaisedButton.icon(
+                onPressed: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) {
+                    return ImageStudyWidget();
+                  }));
+                },
+                icon: Icon(Icons.access_time),
+                label: Text('Image')),
             FlatButton.icon(
                 icon: Icon(Icons.info),
                 label: Text("单选框、复选框"),
                 onPressed: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) {
                     return SwitchAndCheckBoxTestRoute();
                   }));
-                }
-            ),
+                }),
             FlatButton(
               child: Text('输入框'),
               textColor: Colors.red,
               onPressed: () {
                 Navigator.push(context, CupertinoPageRoute(builder: (context) {
-                  return TextFieldStudyWidget(title: '输入框、表单',);//FocusTestRoute();
+                  return TextFieldStudyWidget(
+                    title: '输入框、表单',
+                  ); //FocusTestRoute();
                 }));
               },
             ),
@@ -177,7 +183,7 @@ class _CounterWidgetState extends State<CounterWidget> {
               textColor: Colors.red,
               onPressed: () {
                 Navigator.push(context, CupertinoPageRoute(builder: (context) {
-                  return FormTestRoute();//FocusTestRoute();
+                  return FormTestRoute(); //FocusTestRoute();
                 }));
               },
             ),
@@ -186,7 +192,7 @@ class _CounterWidgetState extends State<CounterWidget> {
               textColor: Colors.red,
               onPressed: () {
                 Navigator.push(context, CupertinoPageRoute(builder: (context) {
-                  return ProgressTestWidget();//FocusTestRoute();
+                  return ProgressTestWidget(); //FocusTestRoute();
                 }));
               },
             ),

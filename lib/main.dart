@@ -3,6 +3,8 @@ import 'package:flutter_study_demo/Second/SecondProjectDemo.dart';
 import 'package:flutter_study_demo/Third/ThirdProjectDemo.dart';
 import 'package:flutter_study_demo/Fourth/FourthProjectDemo.dart';
 import 'package:flutter_study_demo/Fiveth/FivethProjectDemo.dart';
+import 'package:flutter_study_demo/Sixth/SixProjectDemo.dart';
+import 'package:flutter_study_demo/Seventh/SevenProjectDemo.dart';
 
 void main() => runApp(MyApp());
 
@@ -184,6 +186,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     fullscreenDialog: false,
                     builder: (context) {
                       return FivethWidget();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("滚动组件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return SixWeight();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("功能性组件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return SevenWeight();
                     }
                 ));
               },

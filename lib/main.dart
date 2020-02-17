@@ -5,6 +5,8 @@ import 'package:flutter_study_demo/Fourth/FourthProjectDemo.dart';
 import 'package:flutter_study_demo/Fiveth/FivethProjectDemo.dart';
 import 'package:flutter_study_demo/Sixth/SixProjectDemo.dart';
 import 'package:flutter_study_demo/Seventh/SevenProjectDemo.dart';
+import 'package:flutter_study_demo/eight/EightProjectDemo.dart';
+import 'package:flutter_study_demo/night/NightProjectDemo.dart';
 
 void main() => runApp(MyApp());
 
@@ -214,6 +216,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 ));
               },
             ),
+            FlatButton(
+              child: Text("事件处理与通知"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return EightRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("动画"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return NightRoute();
+                    }
+                ));
+              },
+            )
           ],
         ),
       ),

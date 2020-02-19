@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'AnimationBaseDemo.dart';
-import 'HeroAnimationDemo.dart';
-import 'StaggerAnimationDemo.dart';
-import 'AnimationSwitcherDemo.dart';
-import 'AnimatedDecoratedBoxDemo.dart';
+import 'CustomPartDemo.dart';
+import 'CustomPaint、Canvas.dart';
+import 'GradientCircularProgressDemo.dart';
 
-class NightRoute extends StatefulWidget {
+
+class TenRoute extends StatefulWidget {
   @override
-  _NightRouteState createState() => new _NightRouteState();
+  _TenRouteState createState() => new _TenRouteState();
 }
 
-class _NightRouteState extends State<NightRoute> {
+class _TenRouteState extends State<TenRoute> {
 
-  final List<String> _titles = ['动画结构', 'Hero', '交织动画', '切换动画组件', '动画过度组件'];
-  final List<Widget> _widgetArray = [ScaleAnimationRoute(), HeroAnimationRoute(), StaggerRoute(),
-  AnimatedSwitcherCounterRoute(), AnimatedDecoratedBoxRoute()];
+  final List<String> _titles = ['组合现有组件demo', 'CustomPaintRoute、Canvas',
+    '自绘实例：圆形背景渐变进度条'];
+  final List<Widget> _widgetArray = [GradientButtonRoute(), CustomPaintRoute(),
+    GradientCircularProgressRoute()];
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('动画'),
+        title: Text('自定义组件'),
       ),
       body: Column(
         children: <Widget>[
@@ -52,24 +52,24 @@ class _NightRouteState extends State<NightRoute> {
               }));
             },
           ),
-          FlatButton(
-            child: Text(_titles[3]),
-            textColor: Colors.red,
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return _widgetArray[3];
-              }));
-            },
-          ),
-          FlatButton(
-            child: Text(_titles[4]),
-            textColor: Colors.red,
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return _widgetArray[4];
-              }));
-            },
-          ),
+//          FlatButton(
+//            child: Text(_titles[3]),
+//            textColor: Colors.red,
+//            onPressed: () {
+//              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+//                return _widgetArray[3];
+//              }));
+//            },
+//          ),
+//          FlatButton(
+//            child: Text(_titles[4]),
+//            textColor: Colors.red,
+//            onPressed: () {
+//              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+//                return _widgetArray[4];
+//              }));
+//            },
+//          ),
 //          FlatButton(
 //            child: Text(_titles[5]),
 //            textColor: Colors.red,

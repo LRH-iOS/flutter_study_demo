@@ -23,6 +23,14 @@ dependencies:
   #新添加Pub依赖库
   english_words: ^3.1.3
 
+  path_provider: ^0.4.1
+
+  dio: 3.0.0 #latest version
+
+  web_socket_channel: 1.1.0
+
+  json_annotation: ^2.0.0
+
 #  如果我们正在本地开发一个包，包名为pkg1，我们可以通过下面方式依赖：(路径可以是相对的，也可以是绝对的)
 #  pkg1:
 #    path: ../../code/pkg1
@@ -43,6 +51,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  build_runner: ^1.0.0
+  json_serializable: ^2.0.0
 
 flutter:
 

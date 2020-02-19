@@ -7,6 +7,13 @@ import 'package:flutter_study_demo/Sixth/SixProjectDemo.dart';
 import 'package:flutter_study_demo/Seventh/SevenProjectDemo.dart';
 import 'package:flutter_study_demo/eight/EightProjectDemo.dart';
 import 'package:flutter_study_demo/night/NightProjectDemo.dart';
+import 'package:flutter_study_demo/ten/TenProjectDemo.dart';
+import 'package:flutter_study_demo/eleven/ElevenProjectDemo.dart';
+import 'package:flutter_study_demo/twelve/TwelveProjectDemo.dart';
+import 'package:flutter_study_demo/Thirdth/ThirdthProjectDemo.dart';
+import 'package:flutter_study_demo/Fourteenth/FourteenthProjectDemo.dart';
+import 'package:flutter_study_demo/fiveteenth/FiveteenthProject.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -230,6 +237,78 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Text("动画"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return NightRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("自定义组件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return TenRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("文件操作和网络请求"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return ElevenRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("包与插件"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return NightRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("国际化"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return NightRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("Flutter核心原理"),
+              textColor: Colors.red,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute (
+                    fullscreenDialog: false,
+                    builder: (context) {
+                      return NightRoute();
+                    }
+                ));
+              },
+            ),
+            FlatButton(
+              child: Text("一个完整的Flutter应用"),
               textColor: Colors.red,
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute (

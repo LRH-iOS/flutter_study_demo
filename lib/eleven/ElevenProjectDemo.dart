@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'AnimationBaseDemo.dart';
-import 'HeroAnimationDemo.dart';
-import 'StaggerAnimationDemo.dart';
-import 'AnimationSwitcherDemo.dart';
-import 'AnimatedDecoratedBoxDemo.dart';
+import 'FileManagerDemo.dart';
+import 'HttpClientDemo.dart';
+import 'DioDemo.dart';
+import 'MulityDownloadDemo.dart';
+import 'WebSocketDemo.dart';
 
-class NightRoute extends StatefulWidget {
+class ElevenRoute extends StatefulWidget {
   @override
-  _NightRouteState createState() => new _NightRouteState();
+  _ElevenRouteState createState() => new _ElevenRouteState();
 }
 
-class _NightRouteState extends State<NightRoute> {
+class _ElevenRouteState extends State<ElevenRoute> {
 
-  final List<String> _titles = ['动画结构', 'Hero', '交织动画', '切换动画组件', '动画过度组件'];
-  final List<Widget> _widgetArray = [ScaleAnimationRoute(), HeroAnimationRoute(), StaggerRoute(),
-  AnimatedSwitcherCounterRoute(), AnimatedDecoratedBoxRoute()];
+  final List<String> _titles = ['文件操作', 'HttpClient', 'Dio', '分块下载', 'webSocket'];
+  final List<Widget> _widgetArray = [FileOperationRoute(), HttpTestRoute(), FutureBuilderRoute(),
+    MulityDownloadRoute(), WebSocketRoute()];
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('动画'),
+        title: Text('文件操作与网络请求'),
       ),
       body: Column(
         children: <Widget>[
